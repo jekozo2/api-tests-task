@@ -33,7 +33,7 @@ jobs:
       ENVIRONMENT: ${{ github.event.inputs.environment }}
       DEV_API_KEY: ${{ secrets.DEV_API_KEY }}
       TEST_API_KEY: ${{ secrets.TEST_API_KEY }}
-      MARKER: ${{ github.event.inputs.marker}}
+      MARKER: ${{ github.event.inputs.marker || '@regression'}}
 
     steps:
       # Step 1: Checkout code
